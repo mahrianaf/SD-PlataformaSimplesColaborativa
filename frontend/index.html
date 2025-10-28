@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <title>TIME</title>
+</head>
+<body>
+    <!-- Botões Cabeçalho -->
+    <header>
+        <div style="align-items: center; gap: 30px">
+            <h1>TIME</h1>
+            <select style="text-align: right;" id="ambiente" name="ambiente">
+                <option value="1">Sistemas Distribuidos</option>
+            </select>
+            <button id="add_circle"><span class="material-symbols-outlined" style="font-size: 21px;">add_circle</span></button>
+            <button id="group"><span class="material-symbols-outlined" style="font-size: 23px;">group</span></button>
+        </div>
+        <div style="padding-left: 880px; padding-right: 30px;">
+            <button><span class="material-symbols-outlined" style="font-size: 23px;">logout</span></button>
+        </div>
+    </header>
+
+    <!-- Titulo Atividades -->
+    <nav><label for="atv">ATIVIDADES</label></nav>
+
+    <main>
+        <!-- Visualização das Atividades -->
+        <div id="listaAtividades"></div>
+
+        <!-- POPUP Atividade -->
+        <div id="posicaoPopup">
+            <div id="atividadePopup" style="display:none;">
+                <div id="campoPopup">
+                    <label for="atv">ATIVIDADE: </label>
+                    <input id="nomeTask" placeholder="Digite aqui">
+                </div>
+                <div id="campoPopup">
+                    <label for="prazo">PRAZO: </label>
+                    <input id="prazoTask" type="date" name="prazo">
+                </div>
+                <div style="padding-top: 32px; padding-left: 65px;">
+                    <button id="salvarTask">SALVAR</button>
+                </div>
+             </div>
+        </div>
+    </main>
+
+    <!-- Adição Java Script -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
+
+<!--font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif-->
+<!--font-family:Georgia, 'Times New Roman', Times, serif;-->
